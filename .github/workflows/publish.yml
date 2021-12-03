@@ -4,7 +4,7 @@ on:
       - 'v*.*.*-*'
 name: Publish
 jobs:
-  goreleaser:
+  publish:
     runs-on: ubuntu-latest
     steps:
       -
