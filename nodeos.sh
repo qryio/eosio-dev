@@ -12,8 +12,7 @@ nodeos \
     --plugin eosio::chain_plugin \
     --plugin eosio::chain_api_plugin \
     --plugin eosio::http_plugin \
-    --plugin eosio::history_api_plugin \
-    --plugin eosio::history_plugin \
+    --plugin eosio::state_history_plugin \
     --producer-name eosio \
     --enable-stale-production \
     --access-control-allow-origin='*' \
