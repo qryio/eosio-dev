@@ -1,0 +1,35 @@
+on:
+  push:
+    tags:
+      - 'v*.*.*-*'
+name: Publish
+jobs:
+  goreleaser:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      -
+        name: Login to Docker Registry
+        uses: docker/login-action@v1
+        with:
+          username: tsouza
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      -
+        name: Docker meta
+        id: meta
+        uses: docker/metadata-action@v3
+        with:
+          images: qryio/eosio-dev
+      -
+        name: Build and push
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          tags: | 
+            qryio/eosio-dev:latest 
+            ${{ steps.meta.outputs.tags }}
+    
