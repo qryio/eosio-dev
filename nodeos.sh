@@ -24,4 +24,4 @@ nodeos \
     --http-validate-host=false \
     --verbose-http-errors \
     --http-server-address=0.0.0.0:8888 \
-    --state-history-endpoint=0.0.0.0:808
+    --state-history-endpoint=0.0.0.0:8080
