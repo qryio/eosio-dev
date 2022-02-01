@@ -8,7 +8,7 @@ This docker image configures a nodeos (v2.1.0) node, for development purposes, b
 $ docker run -d -p 8080:8080 -p 8888:8888 tsouza/eosio-dev 
 ```
 
-Boot sequence is complete once logs shows `BOOT_SEQUENCE_COMPLETE`
+Boot sequence is complete once logs shows `EOSIO_BOOT_COMPLETE`
 
 ## License
 
